@@ -1,0 +1,8 @@
+# environment variables for docker-compose
+.env.app 
+.env.db 
+
+# secrets for postgres and django application
+kubernetes/db-secrets 
+kubernetes/django-secrets 
+kubernetes/kubernetes-ingress/

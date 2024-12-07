@@ -1,0 +1,18 @@
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="text-center">Your Uploaded Images</h3>
+            <ul class="list-group mt-4">
+                {% for image in images %}
+                    <li class="list-group-item">
+                        <strong>{{ image.name }}</strong><br>
+                        <img src="{{ image.image.url }}" alt="{{ image.name }}" class="img-fluid mt-2">
+                        <p>{{ image.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

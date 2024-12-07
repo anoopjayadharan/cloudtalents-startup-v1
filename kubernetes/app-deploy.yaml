@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+    SQL_ENGINE: "django.db.backends.postgresql"
+    DATABASE: "postgres"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app
+  name: app
+spec:
+  ports:
+  - name: "8000"
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    name: app
+  type: ClusterIP
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: django
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: app
+    spec:
+      containers:
+      - image: ajdemo/fictitious-startup-app:v1
+        imagePullPolicy: Always
+        name: app
+        command: ["/opt/app/web/entrypoint.sh"]
+        args: ["gunicorn" , "--bind","0.0.0.0:8000", "cloudtalents.wsgi:application"]
+        envFrom:
+          - secretRef:
+              name: app-secret
+          - configMapRef:
+              name: app-config
+        ports:
+          - containerPort: 8000
+        volumeMounts:
+          - mountPath: /opt/app/web/media/
+            name: media-volume
+      volumes:
+          - name: media-volume
+            hostPath:
+                path: /media/images # directory location on host
+                type: DirectoryOrCreate # this field is optional
+status: {}
+
