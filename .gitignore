@@ -7,3 +7,4 @@ kubernetes/db-secrets
 kubernetes/django-secrets 
 kubernetes/kubernetes-ingress/
 app/media/*
+kubernetes/postgres-deploy.yaml 
