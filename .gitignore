@@ -5,6 +5,18 @@
 # secrets for postgres and django application
 kubernetes/db-secrets 
 kubernetes/django-secrets 
+
+# kubernetes ingress repo
 kubernetes/kubernetes-ingress/
+
+# media files
 app/media/*
+
+# postgres deployment manifest
 kubernetes/postgres-deploy.yaml 
+
+# github workflow, packer template and Bash script
+app/.github/*
+app/image.pkr.hcl 
+app/setup.sh 
+app/Dockerfile.old 
