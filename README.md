@@ -1,5 +1,7 @@
 # cloudtalents-startup-v1
 
+Blog Link : https://www.linkedin.com/pulse/dockerizing-cloudtalents-startup-app-anoop-jayadharan-vskaf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via
+
 # Docker
 This section helps you learn dockerize a simple Python application.
 
