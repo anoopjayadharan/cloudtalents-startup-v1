@@ -1,0 +1,5 @@
+.github/*
+image.pkr.hcl
+setup.sh
+LICENSE
+README.md
