@@ -1,6 +1,7 @@
 # cloudtalents-startup-v1
 
-This repository helps you learn dockerize a simple Python application.
+# Docker
+This section helps you learn dockerize a simple Python application.
 
 ## Application Components
 
@@ -69,3 +70,6 @@ sudo chmod 777 -R /var/lib/docker/volumes
 ```
 
 8. Access the application and upload images
+
+# Kubernetes
+To be filled
