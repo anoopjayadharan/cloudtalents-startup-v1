@@ -29,20 +29,20 @@ git clone https://github.com/anoopjayadharan/cloudtalents-startup-v1.git
 - .env.app
 ```
 
-SECRET_KEY=
+SECRET_KEY=<FILL_HERE>
 SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=
-SQL_USER=
-SQL_PASSWORD=
+SQL_DATABASE=<FILL_HERE>
+SQL_USER=<FILL_HERE>
+SQL_PASSWORD=<FILL_HERE>
 SQL_HOST=db
 SQL_PORT=5432
 DATABASE=postgres
 ```
 - .env.db
 ```
-POSTGRES_USER=
-POSTGRES_PASSWORD=
-POSTGRES_DB=
+POSTGRES_USER=<FILL_HERE>
+POSTGRES_PASSWORD=<FILL_HERE>
+POSTGRES_DB=<FILL_HERE>
 ```
 
 
