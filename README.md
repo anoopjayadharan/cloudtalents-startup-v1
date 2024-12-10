@@ -1,9 +1,9 @@
 # cloudtalents-startup-v1
 
-Check out the [docker blog](https://www.linkedin.com/pulse/dockerizing-cloudtalents-startup-app-anoop-jayadharan-vskaf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via) for a detailed explanation of the steps.
+This repo helps you learn by doing two things;
 
-# Docker
-This section helps you learn dockerize a simple Python application.
+* Dockerize a simple Python application
+* Run the application in a local k8s cluster
 
 ## Application Components
 
@@ -11,6 +11,9 @@ This section helps you learn dockerize a simple Python application.
 * Gunicorn acts as the application server
 * Python Django web framework
 * Postgres database to store session data
+
+# Docker
+Check out the [docker blog](https://www.linkedin.com/pulse/dockerizing-cloudtalents-startup-app-anoop-jayadharan-vskaf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via) for a detailed explanation of the steps.
 
 ## Prerequisites
 - Docker >= 24.0.7
