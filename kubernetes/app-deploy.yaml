@@ -47,7 +47,7 @@ spec:
         name: app
     spec:
       containers:
-      - image: ajdemo/fictitious-startup-app:v1
+      - image: ajdemo/cloudtalents-startup-app:v1
         imagePullPolicy: Always
         name: app
         command: ["/opt/app/web/entrypoint.sh"]
