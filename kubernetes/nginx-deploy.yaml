@@ -10,7 +10,7 @@ data:
 
     server {
 
-    listen 80;
+    listen 8080;
 
     location / {
         proxy_pass http://cloudtalents;
@@ -44,8 +44,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx:1.25
+      - image: ajdemo/cloudtalents-startup-nginx:v2
         name: nginx
+        ports:
+          - containerPort: 8080
         volumeMounts:
           - mountPath: /opt/app/web/media/
             name: media-volume
@@ -76,9 +78,9 @@ spec:
   ports:
   - name: web
     nodePort: 31680
-    port: 80
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
     app: nginx
   type: NodePort
